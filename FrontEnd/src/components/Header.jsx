@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Search } from "../assets/icons/Search";
 import logo from "../assets/imgs/logo-dh.png";
 
@@ -17,7 +18,9 @@ export function Header() {
   return (
     <>
       <header className="flex items-center justify-between w-full max-w-screen-xl">
-        <img className="w-16" src={logo} alt="logo digital house" />
+        <Link to={'/'}>
+          <img className="w-16" src={logo} alt="logo digital house" />
+        </Link>
         Header
         <button onClick={toggleDarkMode}>Dark Light</button>
         <Search />

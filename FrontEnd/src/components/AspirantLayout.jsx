@@ -1,23 +1,13 @@
+import { AspirantCard } from "./AspirantCard";
+
 export function AspirantLayout() {
   return (
     <>
-      <article className="border grid grid-cols-[repeat(auto-fit,minmax(160px,1fr))] justify-items-center gap-3">
-
-        <section className=" bg-blue-400 bg-opacity-5 w-40 h-40">
-          Aspirant
-        </section>
-        <section className=" bg-blue-400 bg-opacity-5 w-40 h-40">
-          Aspirant
-        </section>
-        <section className=" bg-blue-400 bg-opacity-5 w-40 h-40">
-          Aspirant
-        </section>
-        <section className=" bg-blue-400 bg-opacity-5 w-40 h-40">
-          Aspirant
-        </section>
-        <section className=" bg-blue-400 bg-opacity-5 w-40 h-40">
-          Aspirant
-        </section>
+      <h1 className="pl-4 text-xl">Aspirantes</h1>
+      <article className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] justify-items-center gap-3 p-3">
+        <AspirantCard />
+        <AspirantCard />
+        <AspirantCard />
       </article>
     </>
   )
