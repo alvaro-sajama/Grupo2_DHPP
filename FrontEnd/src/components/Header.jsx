@@ -15,14 +15,29 @@ export function Header() {
     }
   };
 
+  const [display, setDisplay] = useState('hidden')
+
+  const toggledisplay = () => {
+    display === 'hidden' ? setDisplay('grid') : setDisplay('hidden')
+  }
+
   return (
     <>
       <header className="flex items-center justify-between w-full max-w-screen-xl">
         <Link to={'/'}>
           <img className="w-16" src={logo} alt="logo digital house" />
         </Link>
-        Header
         <button onClick={toggleDarkMode}>Dark Light</button>
+
+
+        <button onClick={toggledisplay}>display</button>
+        <div className={ `absolute ${display} place-items-center inset-0 bg-black bg-opacity-50`}>
+          <div className="z-10 bg-white opacity-100">
+            <div onClick={toggledisplay}>X</div>
+            login
+          </div>
+        </div>
+
         <Search />
       </header>
     </>
