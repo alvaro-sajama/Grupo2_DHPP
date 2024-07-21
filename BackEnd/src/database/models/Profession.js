@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-  let alias = "Profession";
+  let alias = "Professions";
   let config = {
     timestamps: false,
     deletedAt: false,
@@ -18,6 +18,6 @@ module.exports = (sequelize, dataTypes) => {
     },
   };
 
-  const Profession = sequelize.define(alias, cols, config);
-  return Profession;
+  const Professions = sequelize.define(alias, cols, config);
+  return Professions;
 };
