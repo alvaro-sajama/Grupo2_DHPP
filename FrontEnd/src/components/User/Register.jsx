@@ -5,7 +5,7 @@ export function Register() {
     <div className="isolate bg-[#e5e7eb] px-6 py-24 sm:py-32 lg:px-16 lg:py-10">
         
        <div>
-        <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Registrarse</h1>
+        <h1 className="text-2xl font-bold tracking-tight text-gray-700 sm:text-2xl">Registrarse</h1>
       </div>
       <form  action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -71,15 +71,15 @@ export function Register() {
               </button>
             </div>
             <label className="text-sm leading-6 text-gray-600" id="switch-1-label">
-              By selecting this, you agree to our
-              <a href="#" className="font-semibold text-indigo-600">privacy&nbsp;policy</a>.
+              Acepta las 
+              <a href="#" className="font-semibold text-indigo-600"> politicas&nbsp;privacidad</a>.
             </label>
-            
+          
           </div>
           
-          <div className="mt-10">
-              <button type="submit" className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Enviar</button>
-          </div>
+      <div>
+        <button type="submit" className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">ENVIAR</button>
+      </div>
       </form>
       </div>     
     </>
