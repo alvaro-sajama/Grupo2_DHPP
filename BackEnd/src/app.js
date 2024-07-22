@@ -9,8 +9,12 @@ app.use(express.urlencoded({ extended: true }));
 
 
 const mainRouter = require('../src/routers/main.js');
+const aspiranteRouter = require('../src/routers/aspirantes.routes.js');
+const empresaRouter = require('../src/routers/empresas.routes.js');
 
 app.use('/', mainRouter);
+app.use('/aspirantes', aspiranteRouter);
+app.use('/empresas', empresaRouter);
 
 const PORT = process.env.PORT || 3000;
 
