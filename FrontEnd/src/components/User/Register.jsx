@@ -6,7 +6,7 @@ export function Register() {
   return (
     <>
     <br />
-    <div className="isolate bg-[#e5e7eb] px-10 py-10 sm:py-10 lg:px-10 lg:py-10">
+    <div className=" overflow-y-auto isolate bg-[#e5e7eb] px-10 py-10 sm:py-10 lg:px-10 lg:py-10 ">
         
        <div>
         <h1 className="text-2xl font-bold text-gray-700 sm:text-2xl">Registrarse</h1>
