@@ -30,6 +30,12 @@ export function Sidebar() {
               <Link to="/register" className="flex items-center">
                 <Clipboard /> Postulate Aquí
               </Link>
+            </li>          
+            
+            <li>
+              <Link to="/registerEmpresa" className="flex items-center">
+                <Clipboard /> Empresas
+              </Link>
             </li>
             <li>
               <Link to="/#" className="flex">

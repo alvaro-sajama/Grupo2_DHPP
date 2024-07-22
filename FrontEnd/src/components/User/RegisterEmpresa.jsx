@@ -2,11 +2,12 @@ import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 
-export function Register() {
+export function RegisterEmpresa() {
   return (
     <>
     <br />
-    <div className=" overflow-y-auto isolate bg-[#e5e7eb] px-10 py-10 sm:py-10 lg:px-10 lg:py-10 ">
+    
+    <div className="bg-[#e5e7eb] isolate px-10 py-10 sm:py-10 lg:px-10 lg:py-10  overflow-y-auto">
         
        <div>
         <h1 className="text-2xl font-bold text-gray-700 sm:text-2xl">Registrarse</h1>
@@ -20,34 +21,50 @@ export function Register() {
                     </p>
                     <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                       <div className="sm:col-span-3">
-                        <label htmlFor="username" className="block text-sm font-medium leading-6 text-gray-900">    
-                          Nombre de Usuario
+                        <label htmlFor="nombreEmpresa" className="block text-sm font-medium leading-6 text-gray-900">    
+                          Nombre de Empresa
                         </label>
                         <div className="mt-2">
                           <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
                             <input
-                              id="username"
-                              name="username"
+                              id="nombreEmpresa"
+                              name="nombreEmpresa"
                               type="text"
-                              placeholder="janesmith"
-                              autoComplete="username"
+                              placeholder="Openix"
+                              autoComplete="nombreEmpresa"
                               className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-12"
                             />
                           </div>
                         </div>
 
 
-                        <label htmlFor="profesion" className="block text-sm font-medium leading-6 text-gray-900">
-                          Profesión
+                        <label htmlFor="rubro" className="block text-sm font-medium leading-6 text-gray-900">
+                          Rubro
                         </label>
                         <div className="mt-2">
                           <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
                             <input
-                              id="profesion"
-                              name="profesion"
+                              id="rubro"
+                              name="rubro"
                               type="text"
-                              placeholder="Contador"
-                              autoComplete="profesion"
+                              placeholder="Informática"
+                              autoComplete="rubro"
+                              className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-12"
+                            />
+                          </div>
+                        </div>
+
+                        <label htmlFor="servicios" className="block text-sm font-medium leading-6 text-gray-900">
+                          Servicios que ofrecen
+                        </label>
+                        <div className="mt-2">
+                          <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                            <input
+                              id="servicios"
+                              name="servicios"
+                              type="text"
+                              placeholder="Servicios y tecnologías de la información"
+                              autoComplete="servicios"
                               className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-12"
                             />
                           </div>
@@ -113,21 +130,7 @@ export function Register() {
                           />
                         </div>
                       </div>
-
-                      <div className="sm:col-span-3">
-                        <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-gray-900">
-                          Apellido
-                        </label>
-                        <div className="mt-2">
-                          <input
-                            id="last-name"
-                            name="last-name"
-                            type="text"
-                            autoComplete="last-name"
-                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                          />
-                        </div>
-                      </div>
+    
 
                       <div className="sm:col-span-3">
                         <label htmlFor="perfil-likedin" className="block text-sm font-medium leading-6 text-gray-900">
@@ -142,6 +145,23 @@ export function Register() {
                           />
                         </div>
                       </div>
+
+                      <div className="sm:col-span-3">
+                        <label htmlFor="cantidadEmpleados" className="block text-sm font-medium leading-6 text-gray-900">
+                            Canridad de empleados   
+                        </label>
+                        <div className="mt-2">
+                          <input
+                            id="cantidadEmpleados"
+                            name="cantidadEmpleados"
+                            type="number"
+                            min="1" 
+                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                          />
+                        </div>
+                      </div>
+
+
 
                       <div className="sm:col-span-3">
                         <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
@@ -170,15 +190,6 @@ export function Register() {
                             className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                           />
                         </div>
-                      </div>                      
-                      <div className="sm:col-span-3">
-                        <label htmlFor="genero" className="block text-sm font-medium leading-6 text-gray-900">Sexo</label>                  
-                        <select id="genero" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-200 focus:border-indigo-300">
-                          <option value="" selected disabled>Selecciona tu género</option>
-                          <option value="masculino">Masculino</option>
-                          <option value="femenino">Femenino</option>
-                          <option value="otro">Otro</option>
-                        </select>
                       </div>
 
                       <div className="col-span-full">
@@ -195,11 +206,11 @@ export function Register() {
                                 id="country"
                                 name="country"
                                 className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
-                              >
-                                <option>AR</option>
-                                <option>CH</option>
-                                <option>UR</option>
-                              </select>
+                                >
+                                <option>US</option>
+                                <option>CA</option>
+                                <option>EU</option>
+                                </select>
                               <ChevronDownIcon
                                 aria-hidden="true"
                                 className="pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400"
