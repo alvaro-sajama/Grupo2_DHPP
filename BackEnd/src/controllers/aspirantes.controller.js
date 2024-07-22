@@ -9,8 +9,7 @@ aspiranteCtrl.getAspirantes = async (req, res) => {
     } catch (error) {
         res.status(404).json({
             'status': '0',
-            'msg': 'Error al obtener el listado de aspirantes',
-            'error': `${error}`
+            'msg': 'Error al obtener el listado de aspirantes'
         });
     }
 };

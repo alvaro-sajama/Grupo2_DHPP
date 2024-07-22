@@ -11,8 +11,7 @@ empresaCtrl.getEmpresas = async (req, res) => {
     } catch (error) {
         res.status(404).json({
             'status': '0',
-            'msg': 'Error al obtener el listado de empresas',
-            'error': `${error}`
+            'msg': 'Error al obtener el listado de empresas'
         });
     }
 
