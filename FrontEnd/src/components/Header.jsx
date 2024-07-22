@@ -29,21 +29,30 @@ export function Header() {
         <Link to={'/'}>
           <img className="w-16" src={logo} alt="logo digital house" />
         </Link>
-        <button onClick={toggleDarkMode}>Dark Light</button>
+        <button onClick={toggleDarkMode}>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+         <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+        </svg>
+
+        </button>
 
 
-        <button onClick={toggledisplay}>display</button>
+        <button onClick={toggledisplay}>Login</button>
         <div className={ `absolute ${display} place-items-center inset-0 bg-black bg-opacity-50`}>
-          <div className="z-10 bg-white opacity-100">
-            <div onClick={toggledisplay}> X </div>  
-            <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+          <div className="z-10 opacity-100 rounded-md backdrop-blur-xl border border-gray-500 flex">
+            <div onClick={toggledisplay}>
+              <button className="flex w-full justify-start rounded-m pt-4 pl-4  ">
+                <p className="bg-black  text-white rounded hover:bg-pink-600 px-3 py-1.5 ">X</p>
+              </button> 
+             </div>  
+            <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-20 ">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                   <img
                     alt="Your Company"
-                    src="./src/assets/imgs/logoMorado.jpg"
+                    src="./src/assets/imgs/LogoG2.png"
                     className="mx-auto h-12 w-12  w-auto"
                   />
-                  <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+                  <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white-900">
                     Iniciar sesión
                   </h2>
                 </div>
@@ -51,7 +60,7 @@ export function Header() {
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                   <form action="#" method="POST" className="space-y-6">
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+                      <label htmlFor="email" className="block text-sm font-medium leading-6 text-white-900">
                         Email 
                       </label>
                       <div className="mt-2">
@@ -68,14 +77,9 @@ export function Header() {
 
                     <div>
                       <div className="flex items-center justify-between">
-                        <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
+                        <label htmlFor="password" className="block text-sm font-medium leading-6 text-white-900">
                           Contraseña
                         </label>
-                        <div className="text-sm">
-                          <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
-                          ¿Olvidado Su Contraseña?
-                          </a>
-                        </div>
                       </div>
                       <div className="mt-2">
                         <input
@@ -92,23 +96,32 @@ export function Header() {
                     <div>
                       <button
                         type="submit"
-                        className="flex w-full justify-center rounded-md bg-black px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                        className="flex w-full justify-center rounded-md bg-black px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-pink-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                       >
                         Login
                       </button>
                     </div>
                   </form>
-
-                  <p className="mt-10 text-center text-sm text-gray-500">
+                  <div className="text-sm text-center mt-5 ">
+                          <a href="#" className="font-semibold text-white-100 hover:text-pink-600">
+                          ¿Olvidado Su Contraseña?
+                          </a>
+                        </div>
+                  <p className="mt-3 text-center text-sm text-white-100">
                     ¿No tiene cuenta?{' '}
-                    <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+                    <a href="#" className="font-semibold leading-6 text-white-100 hover:text-pink-600">
                       Registrarse
                     </a>
                   </p>
                 </div>
               </div>
-
-            
+              <div className="relative">
+              <img
+              src="./src/assets/imgs/imgLogin.jpg"
+              alt="img"
+              class="w-[400px] h-full hidden rounded-r-2xl md:block object-cover"
+              />
+              </div>
           </div>
         </div>
 
