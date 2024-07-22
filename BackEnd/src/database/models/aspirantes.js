@@ -1,9 +1,12 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = "aspirantes";
+
     let config = {
+      tableName: 'aspirantes',
       timestamps: false,
       deletedAt: false,
     };
+    
     let cols = {
       id: {
         type: dataTypes.INTEGER,

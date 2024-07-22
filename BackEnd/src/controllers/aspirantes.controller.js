@@ -1,15 +1,16 @@
-const Aspirante = require('./../database/models/aspirantes');
+const db = require('../database/models');
 const aspiranteCtrl = {};
 
 //GET obtener listado de todos los aspirantes
 aspiranteCtrl.getAspirantes = async (req, res) => {
     try {
-        const aspirantes = await Aspirante.findAll();
+        const aspirantes = await db.aspirantes.findAll();
         res.json(aspirantes);
     } catch (error) {
         res.status(404).json({
             'status': '0',
-            'msg': 'Error al obtener el listado de aspirantes'
+            'msg': 'Error al obtener el listado de aspirantes',
+            'error': `${error}`
         });
     }
 };

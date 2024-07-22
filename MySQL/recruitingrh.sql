@@ -27,7 +27,7 @@ CREATE TABLE aspirantes (
     imagen VARCHAR(255) DEFAULT 'userDefault.png',
     profesion_id INT,
     contraseña varchar(255) ,
-    FOREIGN KEY (profesion_id) REFERENCES profesiones(id) -- Clave foránea
+    FOREIGN KEY (profesion_id) REFERENCES Professions(id) -- Clave foránea
 );
 
 -- Crear la tabla empresas
@@ -39,7 +39,7 @@ CREATE TABLE empresas (
     imagen VARCHAR(255) DEFAULT 'userDefault.png',
     profession_id INT,
     contraseña varchar(255),
-    FOREIGN KEY (profesion_id) REFERENCES profesiones(id) -- Clave foránea
+    FOREIGN KEY (profession_id) REFERENCES Professions(id) -- Clave foránea
 );
 
 -- Insertar profesiones de prueba en la tabla profesiones
@@ -51,7 +51,7 @@ INSERT INTO Professions (nombre) VALUES
 ('Consultor de Negocios');
 
 -- Insertar valores de prueba en la tabla aspirantes
-INSERT INTO aspirantes (dni, nombre, apellido, email, telefono, linkedin_url, fecha_nacimiento, sexo, imagen, profession_id)
+INSERT INTO aspirantes (dni, nombre, apellido, email, telefono, linkedin_url, fecha_nacimiento, sexo, imagen, profesion_id)
 VALUES
 ('12345678A', 'Juan', 'Pérez', 'juan.perez@example.com', '+123456789', 'https://www.linkedin.com/in/juanperez', '1985-05-20', 'M', 'default.jpg', 1),
 ('87654321B', 'María', 'Gómez', 'maria.gomez@example.com', '+987654321', 'https://www.linkedin.com/in/mariagomez', '1990-10-15', 'F', 'default.jpg', 2),

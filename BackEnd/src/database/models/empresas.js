@@ -28,7 +28,7 @@ module.exports = (sequelize, dataTypes) => {
         type: dataTypes.STRING,
         defaultValue: 'userDefault.png'
       },
-      profesion_id: {
+      profession_id: {
         type: dataTypes.INTEGER,
         references: {
           model: "Profession",

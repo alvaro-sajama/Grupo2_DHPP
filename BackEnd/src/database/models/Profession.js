@@ -1,6 +1,7 @@
 module.exports = (sequelize, dataTypes) => {
-  let alias = "Professions";
+  let alias = "Profession";
   let config = {
+    tableName: 'Professions',
     timestamps: false,
     deletedAt: false,
   };
