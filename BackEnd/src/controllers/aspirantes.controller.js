@@ -16,17 +16,21 @@ aspiranteCtrl.getAspirantes = async (req, res) => {
 
 //POST registrar un aspirante
 aspiranteCtrl.createAspirante = async (req, res) => {
+    
+    Aspirante = db.aspirantes;
     const aspirante = new Aspirante(req.body);
     try {
+        console.log('error')
         await aspirante.save();
         res.status(200).json({
             'status': '1',
             'msg': 'aspirante registrado exitosamente'
         });
     } catch (error) {
+        console.log(error)
         res.status(404).json({
             'status': '0',
-            'msg': 'Error al registrar aspirante'
+            'msg': error.message
         });
         
     }
