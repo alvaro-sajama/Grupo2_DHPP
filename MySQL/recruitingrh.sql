@@ -53,8 +53,9 @@ INSERT INTO Professions (nombre) VALUES
 -- Insertar valores de prueba en la tabla aspirantes
 INSERT INTO aspirantes (dni, nombre, apellido, email, telefono, linkedin_url, fecha_nacimiento, sexo, imagen, profesion_id)
 VALUES
-('12345678A', 'Juan', 'Pérez', 'juan.perez@example.com', '+123456789', 'https://www.linkedin.com/in/juanperez', '1985-05-20', 'M', 'default.jpg', 1),
-('87654321B', 'María', 'Gómez', 'maria.gomez@example.com', '+987654321', 'https://www.linkedin.com/in/mariagomez', '1990-10-15', 'F', 'default.jpg', 2),
-('11223344C', 'Carlos', 'López', 'carlos.lopez@example.com', '+123123123', 'https://www.linkedin.com/in/carloslopez', '1980-12-01', 'M', 'default.jpg', 3),
-('22334455D', 'Ana', 'Martínez', 'ana.martinez@example.com', '+456456456', 'https://www.linkedin.com/in/anamartinez', '1995-07-30', 'F', 'default.jpg', 4),
-('33445566E', 'Luis', 'Ramírez', 'luis.ramirez@example.com', '+789789789', 'https://www.linkedin.com/in/luisramirez', '1987-03-25', 'M', 'default.jpg', 5);
+('87654321B', 'María', 'Gómez', 'maria.gomez@example.com', '+987654321', 'https://www.linkedin.com/in/mariagomez', '1990-10-15', 'F', 'user1', 2),
+('12345678A', 'Juan', 'Pérez', 'juan.perez@example.com', '+123456789', 'https://www.linkedin.com/in/juanperez', '1985-05-20', 'M', 'user2', 1),
+('11223344C', 'Carlos', 'López', 'carlos.lopez@example.com', '+123123123', 'https://www.linkedin.com/in/carloslopez', '1980-12-01', 'M', 'user6', 3),
+('23445588D', 'Rocio', 'Carle', 'rocio.carle@example.com', '+456456456', 'https://www.linkedin.com/in/anamartinez', '1995-07-30', 'F', 'user4', 4),
+('22334455D', 'Ana', 'Martínez', 'ana.martinez@example.com', '+456456456', 'https://www.linkedin.com/in/anamartinez', '1995-07-30', 'F', 'user3', 4),
+('33445566E', 'Luis', 'Ramírez', 'luis.ramirez@example.com', '+789789789', 'https://www.linkedin.com/in/luisramirez', '1987-03-25', 'M', 'user5', 5);

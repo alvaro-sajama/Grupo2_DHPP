@@ -1,16 +1,19 @@
 import propType from 'prop-types'
-import foto1 from "../assets/imgs/foto1.jpg"
 import { Star } from "../assets/icons/Star"
 import { MessageCircle } from '../assets/icons/MessageCircle'
 import { Email } from '../assets/icons/Email'
+import {CloudinaryImage} from '../services/cloudinary'
 
-export function AspirantCard( { foto = 'userDefault.png' } ) {
-  foto = foto1
+export function AspirantCard( { userData } ) {
+
   return(
     <section className='flex flex-col items-center w-full p-3 bg-white dark:bg-black shadow-md dark:shadow-fuchsia-700 rounded'>
-      <img className='rounded-full w-40' src={ foto } alt={`imagen de `} />
-      <h1 className='text-xl'>Nombre</h1>
-      <h2 className='text-lg opacity-60'>Profesion</h2>
+  
+      <div className='rounded-full w-40 overflow-hidden'>
+        <CloudinaryImage publicID={ userData.imagen } />
+      </div>
+      <h1 className='text-xl'>{ userData.nombre } {userData.apellido}</h1>
+      <h2 className='text-lg opacity-60'>{ userData.profesion_id}</h2>
       <div className='flex justify-evenly w-full opacity-60'>
         <a href="#"><Star /></a>
         <a href="#"><MessageCircle /></a>
@@ -21,5 +24,5 @@ export function AspirantCard( { foto = 'userDefault.png' } ) {
 }
 
 AspirantCard.propTypes = {
-  foto: propType.string
+  userData: propType.any
 }
