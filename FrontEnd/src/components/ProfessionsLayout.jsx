@@ -1,21 +1,36 @@
+import { useEffect, useState } from "react"
+
 export function ProfessionsLayout() {
+
+  const [profesiones, setProfesiones] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/profesiones')
+     .then(res => res.json())
+     .then(data => {
+        setProfesiones(data);
+      })
+     .catch(error => {
+        console.error('Error fecthing profesiones:', error);
+      });
+  },[]);
 
   return (
     <>
-      <h1 className="pl-4 text-xl">Listado de Profesiones</h1>
+      <h1 className="pl-4 text-xl">Profesiones</h1>
+      <h3 className="text-center">Listado de profesiones</h3>
       <article className="p-3 gap-1 grid grid-cols-[repeat(auto-fit,minmax(310px_,1fr))]">
-        <section className="text-center rounded p-2 bg-white dark:bg-black shadow-sm shadow-[#DA70D6]">
-          Profession
-        </section>
-        <section className="text-center rounded p-2 bg-white dark:bg-black shadow-sm shadow-fuchsia-600">
-          Profession
-        </section>
-        <section className="text-center rounded p-2 bg-white dark:bg-black shadow-sm shadow-fuchsia-500">
-          Profession
-        </section>
-        <section className="text-center rounded p-2 bg-white dark:bg-black shadow-sm shadow-fuchsia-400">
-          Profession
-        </section>
+        {profesiones && profesiones.length > 0 ? 
+        profesiones.map(profesion => {
+          return (<a href="#" key={profesion.id} 
+            className="text-center rounded p-2 
+            bg-white dark:bg-black shadow-sm shadow-[#DA70D6]">
+              {profesion.nombre}
+              </a>)
+        }) : 
+        (<h6>No se encontraron profesiones</h6>)
+        }
+        
       </article>
     </>
   )
