@@ -19,7 +19,7 @@ export function ProfessionsLayout() {
     <>
       <h1 className="pl-4 text-xl">Profesiones</h1>
       <h3 className="text-center">Listado de profesiones</h3>
-      <article className="p-3 gap-1 grid grid-cols-[repeat(auto-fit,minmax(310px_,1fr))]">
+      <article className="p-3 gap-1 grid">
         {profesiones && profesiones.length > 0 ? 
         profesiones.map(profesion => {
           return (<a href="#" key={profesion.id} 
