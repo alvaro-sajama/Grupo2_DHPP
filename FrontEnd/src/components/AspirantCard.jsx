@@ -13,11 +13,11 @@ export function AspirantCard( { userData } ) {
         <CloudinaryImage publicID={ userData.imagen } />
       </div>
       <h1 className='text-xl'>{ userData.nombre } {userData.apellido}</h1>
-      <h2 className='text-lg opacity-60'>{ userData.profesion_id}</h2>
+      <h2 className='text-lg opacity-60'>{ userData.Profesion.nombre}</h2>
       <div className='flex justify-evenly w-full opacity-60'>
         <a href="#"><Star /></a>
-        <a href="#"><MessageCircle /></a>
-        <a href="#"><Email /></a>
+        <a href={`tel:${userData.telefono}`}><MessageCircle /></a>
+        <a href={`mailto:${userData.email}`}><Email /></a>
       </div>
     </section>
   )

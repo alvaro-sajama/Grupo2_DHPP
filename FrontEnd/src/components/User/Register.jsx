@@ -13,7 +13,7 @@ export function Register() {
        <div>
         <h1 className="text-2xl font-bold text-gray-700 sm:text-2xl">Registrarse</h1>
       </div>
-          <form>
+      <form method="POST" action="http://localhost:3000/aspirantes" encType="multipart/form-data">
                 <div className="space-y-1">
                   <div className="border-b border-gray-900/10 pb-12">
                     <h2 className="text-base font-semibold leading-7 text-gray-900">Perfil</h2>
@@ -175,10 +175,10 @@ export function Register() {
                       </div>                      
                       <div className="sm:col-span-3">
                         <label htmlFor="genero" className="block text-sm font-medium leading-6 text-gray-900">Sexo</label>                  
-                        <select id="genero" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-200 focus:border-indigo-300">
+                        <select id="genero" name='sexo' className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-200 focus:border-indigo-300">
                           <option value="" selected disabled>Selecciona tu género</option>
-                          <option value="masculino">Masculino</option>
-                          <option value="femenino">Femenino</option>
+                          <option value="M">Masculino</option>
+                          <option value="F">Femenino</option>
                           <option value="otro">Otro</option>
                         </select>
                       </div>
