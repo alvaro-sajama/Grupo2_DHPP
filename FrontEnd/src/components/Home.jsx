@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 
 export function Home() {
   return (
-    <div className="flex flex-1 items-start w-full max-w-screen-xl">
+    <div className="flex flex-1 items-start w-full max-w-screen-xl min-h-0">
       <Sidebar />
-      <main className="w-full h-[calc(100%-3rem)] md:h-[calc(100%-2rem)] overflow-y-auto overflow-x-hidden border-l border-black dark:border-white">
+      <main className="w-full h-full overflow-y-auto overflow-x-hidden border-l border-black dark:border-white">
         <section className="flex flex-col gap-3">
           <article className="flex flex-col md:flex-row justify-evenly items-center p-2 gap-3">
             <div className="flex flex-col w-52 p-3 gap-3 bg-white dark:bg-black rounded-lg">
