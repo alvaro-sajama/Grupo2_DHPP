@@ -9,13 +9,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-const mainRouter = require('../src/routers/main.js');
+//const mainRouter = require('../src/routers/main.js');
 const aspiranteRouter = require('../src/routers/aspirantes.routes.js');
 const empresaRouter = require('../src/routers/empresas.routes.js');
+const profesionRouter = require('../src/routers/profesiones.routes.js');
 
-app.use('/', mainRouter);
+//app.use('/', mainRouter);
 app.use('/aspirantes', aspiranteRouter);
 app.use('/empresas', empresaRouter);
+app.use('/profesiones', profesionRouter);
 
 const PORT = process.env.PORT;
 
