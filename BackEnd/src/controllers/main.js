@@ -3,17 +3,12 @@ const { uploadImage } = require("../services/cloudinary");
 
 const mainControllers = {
   index: (req, res) => {
-    db.Profession.findAll().then((profesiones) => {
-      res.send({
-        profesiones: profesiones
-      });
+    res.send({
+      aspirantes: '/aspirantes',
+      profesiones: '/profesiones'
     });
-  },
-  //ejemplo para subir imagen
-  uploadImage: (req, res) => {
-    uploadImage()
-    res.send('imagen subida')
-  },
+    ;
+  }
 };
 
 module.exports = mainControllers;
