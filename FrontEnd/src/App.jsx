@@ -4,7 +4,7 @@ import { Home } from './components/Home';
 import { Register } from './components/User/Register';
 import { RegisterEmpresa } from './components/User/RegisterEmpresa';
 import {EditEmpresa} from './components/User/EditEmpresa'
-import {EditUser} from './components/User/EditUser'
+import {EditUser} from './components/User/editUser'
 
 function App() {
 
