@@ -1,4 +1,5 @@
 const db = require('../database/models');
+const { Op } = require('sequelize');
 const aspiranteCtrl = {};
 
 //GET obtener listado de todos los aspirantes
@@ -15,6 +16,38 @@ aspiranteCtrl.getAspirantes = async (req, res) => {
         res.status(404).json({
             'status': '0',
             'msg': 'Error al obtener el listado de aspirantes'
+        });
+    }
+};
+
+//GET obtener listado de todos los aspirantes
+aspiranteCtrl.findAspirantes = async (req, res) => {
+    try {
+        
+        const { profesion } = req.query;
+        console.log(profesion);
+
+        if(!profesion) {
+            return res.json({});
+        }
+
+        const aspirantes = await db.aspirantes.findAll({
+            include: [{
+                model: db.Profession,
+                as: 'Profesion'
+            }],
+            where:{
+                '$Profesion.nombre$': {
+                    [Op.like]: `%${ profesion }%`
+                }
+
+            }
+        });
+        res.json(aspirantes);
+    } catch (error) {
+        res.status(404).json({
+            'status': '0',
+            'msg': error.message
         });
     }
 };
